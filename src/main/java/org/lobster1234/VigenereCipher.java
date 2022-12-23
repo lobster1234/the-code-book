@@ -42,8 +42,26 @@ public class VigenereCipher {
     }
 
     public String decrypt(String cipherText){
-        //TODO implement this
-        return cipherText;
+        //we build the key stream same size as cipherText
+        StringBuilder builder = new StringBuilder();
+        StringBuilder keyStream = new StringBuilder();
+        while(keyStream.length() <= cipherText.length()){
+            keyStream.append(keyPhrase);
+        }
+        keyStream.delete(cipherText.length(),keyStream.length());
+        for(int i=0;i<cipherText.length();i++){
+            int row = keyStream.charAt(i) - 'a';
+            //now we find the column where the cipherText is
+            int col = 0;
+            for(int j=0;j<26;j++){
+                if(square[row][j] == cipherText.charAt(i)) {
+                    col = j;
+                }
+            }
+            //The character want is the alphabet with that index (a=0,b=1...)
+            builder.append((char) ('a'+col));
+        }
+        return builder.toString();
     }
 
     public void printSquare(){

@@ -18,6 +18,8 @@ public class VigenereCipherTest extends TestCase {
     }
 
     public void testDecrypt() {
-        //TODO implement this
+        String cipherText = "zpdxvpazhslzbhiwzbkmznm";
+        String plainText = c.decrypt(cipherText);
+        assertEquals(plainText,"diverttroopstoeastridge");
     }
 }
