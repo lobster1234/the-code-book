@@ -2,7 +2,7 @@
 Algorithms from [The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography](https://www.amazon.com/Code-Book-Science-Secrecy-Cryptography/dp/0385495323/)
 
 
-Love the Vegenere Cipher, Page 48 :)
+Love the Vegenere Square, Page 48 :)
 
 ```
 a  b  c  d  e  f  g  h  i  j  k  l  m  n  o  p  q  r  s  t  u  v  w  x  y  z
